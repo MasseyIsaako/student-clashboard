@@ -25,11 +25,17 @@ body, html{
 	font-weight:300;
 }
 
+
+#wrapper{
+	background-color:#C8C8C8;
+	min-height:400px;
+
+}
+
 #header{
 	width:$full;
 	height:auto;
 	padding:30px;
-	background-color:#C8C8C8;
 	border-bottom:2px solid $prim;
 
 	h1{
@@ -43,3 +49,34 @@ body, html{
 		margin:$null $null 10px $null;
 	}
 }
+
+#maps-container{
+	padding:20px;
+	width:$full;
+	min-height:10px;
+}
+
+.map-group{
+	background-color:red;
+	min-height:10px;
+	width:90%;
+	margin:20px 5%;
+}
+
+.map-dimensions{
+	// give height and width here
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
