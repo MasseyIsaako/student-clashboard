@@ -1,0 +1,45 @@
+// Google Font
+@import url('https://fonts.googleapis.com/css?family=Exo:300');
+
+// Variables
+$null:0px;
+$full:100%;
+$prim:#125078;
+
+// Mixin
+@mixin centerText{
+	width:$full;
+	text-align:center;
+}
+
+// Standard reset code
+body, html{
+	padding:$null;
+	margin:$null;
+}
+
+*{
+	font-family: 'Exo', sans-serif;
+	box-sizing:border-box;
+	color:$prim;
+	font-weight:300;
+}
+
+#header{
+	width:$full;
+	height:auto;
+	padding:30px;
+	background-color:#C8C8C8;
+	border-bottom:2px solid $prim;
+
+	h1{
+		@include centerText;
+		margin-bottom:$null;
+		letter-spacing:25px;
+	}
+
+	h4{
+		@include centerText;
+		margin:$null $null 10px $null;
+	}
+}
