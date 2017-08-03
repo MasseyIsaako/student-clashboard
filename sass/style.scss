@@ -5,6 +5,7 @@
 $null:0px;
 $full:100%;
 $prim:#125078;
+$sec:#C8C8C8;
 
 // Mixin
 @mixin centerText{
@@ -23,13 +24,15 @@ body, html{
 	box-sizing:border-box;
 	color:$prim;
 	font-weight:300;
+	float:left;
 }
 
 
 #wrapper{
 	background-color:#C8C8C8;
 	min-height:400px;
-
+	width:$full;
+	position:absolute;
 }
 
 #header{
@@ -57,14 +60,30 @@ body, html{
 }
 
 .map-group{
-	background-color:red;
+	height:auto;
 	min-height:10px;
 	width:90%;
 	margin:20px 5%;
 }
 
 .map-dimensions{
-	// give height and width here
+	background-color:white;
+	position:relative;
+	width:75%;
+	min-height:100px;
+}
+
+.node-dimensions{
+	background-color:#EBEBEB;
+	position:relative;
+	float:right;
+	width:20%;
+	min-height:100px;
+	padding:10px;
+
+	h2, span, h4{@include centerText;}
+
+	h4{margin-top:$null;}
 }
 
 
