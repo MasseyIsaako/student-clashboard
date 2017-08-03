@@ -9,7 +9,10 @@
 		<meta name="description" content="Want to get an overall idea of who your classmates are? Clashboard, easy as pie (charts) to see what you want.">
 		<meta name="author" content="Massey Isa'ako">
 
-		<!-- Linking to external stylesheet -->
+		<!-- Font Awesome Styleheet -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Linking to external CSS stylesheet -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
@@ -20,34 +23,40 @@
 			<h4>WEB & UX</h4>
 		</div>
 
-		<div id="maps-container">
-			<div class="map-group">
+		<div id="charts-container">
+			<div class="chart-group">
 				<div id="studentTravel"></div>
 			</div>
 
-			<div class="map-group">
-				<div id="studentAge" class="map-dimensions"></div>
+			<div class="chart-group">
+				<!-- This is the chart container -->
+				<div id="studentAge" class="chart-dimensions"></div>
+				<!-- This is where information is displayed when the user selects a section of the chart -->
 				<div id="agePush" class="node-dimensions">
 					<h2>Age</h2>
-					<span>?</span>
+					<span id="age-output">?</span>
 					<h4>years</h4>
 				</div>
 			</div>
 
-			<div class="map-group">
-				<div id="studentGender" class="map-dimensions"></div>
+			<div class="chart-group">
+				<!-- This is the chart container -->
+				<div id="studentGender" class="chart-dimensions"></div>
+				<!-- This is where information is displayed when the user selects a section of the chart -->
 				<div id="genderPush" class="node-dimensions">
 					<h2>Gender</h2>
-					<span>?</span>
-					<h4>unknown</h4>
+					<span id="gender-output">?</span>
+					<h4 id="gender-output">unknown</h4>
 				</div>
 			</div>
 
-			<div class="map-group">
-				<div id="studentHeight" class="map-dimensions"></div>
+			<div class="chart-group">
+				<!-- This is the chart container -->
+				<div id="studentHeight" class="chart-dimensions"></div>
+				<!-- This is where information is displayed when the user selects a section of the chart -->
 				<div id="heightPush" class="node-dimensions">
 					<h2>Height</h2>
-					<span>?</span>
+					<span id="height-output">?</span>
 					<h4>cm</h4>
 				</div>
 			</div>

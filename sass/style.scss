@@ -53,20 +53,27 @@ body, html{
 	}
 }
 
-#maps-container{
+#charts-container{
 	padding:20px;
-	width:$full;
+	width:80%;
+	margin:$null 10%;
 	min-height:10px;
 }
 
-.map-group{
+#studentTravel{
+	width:100%;
+	height:500px;
+	background-color:white;
+}
+
+.chart-group{
 	height:auto;
 	min-height:10px;
 	width:90%;
 	margin:20px 5%;
 }
 
-.map-dimensions{
+.chart-dimensions{
 	background-color:white;
 	position:relative;
 	width:75%;
@@ -81,7 +88,9 @@ body, html{
 	min-height:100px;
 	padding:10px;
 
-	h2, span, h4{@include centerText;}
+	h2, span, h4, i{@include centerText;}
+
+	.fa-question, span{font-size:50px !important;}
 
 	h4{margin-top:$null;}
 }

@@ -1,0 +1,43 @@
+[
+	{
+		"travel": "New Zealand",
+		"age": 18,
+		"gender": "Male",
+		"height": 170
+	},{
+		"travel": "New Zealand",
+		"age": 18,
+		"gender": "Male",
+		"height": 182
+	},{
+		"travel": "Bali",
+		"age": 30,
+		"gender": "Female",
+		"height": 165
+	},{
+		"travel": "Japan",
+		"age": 25,
+		"gender": "Male",
+		"height": 180
+	},{
+		"travel": "Samoa",
+		"age": 25,
+		"gender": "Male",
+		"height": 180
+	},{
+		"travel": "Greece",
+		"age": 23,
+		"gender": "Female",
+		"height": 170
+	},{
+		"travel": "",
+		"age": 24,
+		"gender": "Male",
+		"height": 175
+	},{
+		"travel": "New Zealand",
+		"age": 26,
+		"gender": "Female",
+		"height": 174
+	}
+]
