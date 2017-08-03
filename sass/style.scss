@@ -37,19 +37,23 @@ body, html{
 
 #header{
 	width:$full;
-	height:auto;
+	height:175px;
 	padding:30px;
-	border-bottom:2px solid $prim;
+	position:fixed;
+	z-index:1;
+	background-color:$prim;
 
 	h1{
 		@include centerText;
 		margin-bottom:$null;
 		letter-spacing:25px;
+		color:white;
 	}
 
 	h4{
 		@include centerText;
 		margin:$null $null 10px $null;
+		color:white;
 	}
 }
 
@@ -57,6 +61,7 @@ body, html{
 	padding:20px;
 	width:80%;
 	margin:$null 10%;
+	margin-top:175px;
 	min-height:10px;
 }
 

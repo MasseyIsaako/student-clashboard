@@ -44,15 +44,52 @@ function drawChart(){
 					data.addRow([DataFromJSON[i].age]);
 				}
 
-				options = {}
+				options = {
+					title: "Student Age"
+				}
 				
 				chart = new google.visualization.Histogram(document.getElementById("studentAge"));
 				chart.draw(data, options);
 			}
 
+			// Gender Chart
+			function gender(){
+				var maleCount = 0;
+				var femaleCount = 0;
+
+				data = new google.visualization.DataTable();
+				data.addColumn("string", "Male");
+				data.addColumn("string", "Female");
+				data.addColumn("number", "Female");
+				data.addColumn("number", "Male");
+
+				for (var i = 0; i < DataFromJSON.length; i++) {
+					if(DataFromJSON[i].gender === "Male"){
+						maleCount = "1";
+					} else {
+						femaleCount += 1;
+					}
+				}
+
+				data.addRow([maleCount, femaleCount]);
+
+				console.log(maleCount);
+				console.log(femaleCount);
+
+				options = {
+					title: "Student Gender",
+					pieHole: 0.4
+				}
+				
+				chart = new google.visualization.PieChart(document.getElementById("studentGender"));
+				chart.draw(data, options);
+			}
+
+
 			// Calling the functions
 			travel();
 			age();
+			gender();
 
 		}, error: function(){
 			console.log("bad");
