@@ -49,7 +49,16 @@ function drawChart(){
 				}
 				
 				chart = new google.visualization.Histogram(document.getElementById("studentAge"));
+				google.visualization.events.addListener(chart, 'select', clickEvent);
 				chart.draw(data, options);
+
+				function clickEvent(){
+					var tableRow = chart.getSelection()[0];
+					if(tableRow){
+						var studentAge = data.getValue(tableRow.row, 0);
+						document.getElementById('age-output').innerText = studentAge;
+					}
+				}
 			}
 
 			// Gender Chart
@@ -89,7 +98,7 @@ function drawChart(){
 			// Calling the functions
 			travel();
 			age();
-			gender();
+			// gender();
 
 		}, error: function(){
 			console.log("bad");
