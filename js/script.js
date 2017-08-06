@@ -45,7 +45,7 @@ function drawChart(){
 				}
 
 				options = {
-					title: "Student Age"
+					title: "Age of Students in Class"
 				}
 				
 				chart = new google.visualization.Histogram(document.getElementById("studentAge"));
@@ -63,42 +63,45 @@ function drawChart(){
 
 			// Gender Chart
 			function gender(){
-				var maleCount = 0;
-				var femaleCount = 0;
+				var data = google.visualization.arrayToDataTable([
+					['Gender', 'Of Class'],
+					['male',     5],
+					['female',      3]		         
+		        ]);
 
-				data = new google.visualization.DataTable();
-				data.addColumn("string", "Male");
-				data.addColumn("string", "Female");
-				data.addColumn("number", "Female");
-				data.addColumn("number", "Male");
+		        var options = {
+		          title: 'Number of Each Gender in Class'		          
+		        };		    
 
-				for (var i = 0; i < DataFromJSON.length; i++) {
-					if(DataFromJSON[i].gender === "Male"){
-						maleCount = "1";
-					} else {
-						femaleCount += 1;
+		        var chart = new google.visualization.PieChart(document.getElementById('studentGender'));
+		        google.visualization.events.addListener(chart, 'select', clickEvent);
+		        chart.draw(data, options);
+
+		        function clickEvent(){
+					var tableRow = chart.getSelection()[0];
+					$("#gender-placeholder").hide();
+
+					if(tableRow){
+						var studentGender = data.getValue(tableRow.row, 0);
+						if(studentGender === "male"){
+							$("#male").show();
+							$("#female").hide();
+						} else if(studentGender === "female"){
+							$("#female").show();
+							$("#male").hide();
+						}
+						document.getElementById('gender-identifier').innerText = studentGender;
+						$("#gender-output").show();
 					}
 				}
-
-				data.addRow([maleCount, femaleCount]);
-
-				console.log(maleCount);
-				console.log(femaleCount);
-
-				options = {
-					title: "Student Gender",
-					pieHole: 0.4
-				}
-				
-				chart = new google.visualization.PieChart(document.getElementById("studentGender"));
-				chart.draw(data, options);
 			}
 
 
 			// Calling the functions
 			travel();
 			age();
-			// gender();
+			gender();
+
 
 		}, error: function(){
 			console.log("bad");
