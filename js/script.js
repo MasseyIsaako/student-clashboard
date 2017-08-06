@@ -28,7 +28,7 @@ function drawChart(){
 				var options = {
 					datalessRegionColor: "#ebebeb",
 					defaultColor: "#125078",
-					backgroundColor: "#FFFFFF",
+					backgroundColor: "#FFFFFF"
 				}
 
 				var chart = new google.visualization.GeoChart(document.getElementById("studentTravel"));
@@ -65,12 +65,12 @@ function drawChart(){
 			function gender(){
 				var data = google.visualization.arrayToDataTable([
 					['Gender', 'Of Class'],
-					['male',     5],
-					['female',      3]		         
+					['male', 8],
+					['female', 7]
 		        ]);
 
 		        var options = {
-		          title: 'Number of Each Gender in Class'		          
+		          title: 'Number of Each Gender in Class'
 		        };		    
 
 		        var chart = new google.visualization.PieChart(document.getElementById('studentGender'));

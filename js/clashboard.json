@@ -47,5 +47,47 @@
 		"age": 26,
 		"gender": "Female",
 		"height": 174
+	},{
+		"studentNumber": "Student 9",
+		"travel": "South America",
+		"age": 27,
+		"gender": "Male",
+		"height": 185
+	},{
+		"studentNumber": "Student 10",
+		"travel": "Spain",
+		"age": 27,
+		"gender": "Female",
+		"height": 161
+	},{
+		"studentNumber": "Student 11",
+		"travel": "Hawaii",
+		"age": 19,
+		"gender": "Female",
+		"height": 165
+	},{
+		"studentNumber": "Student 12",
+	 	"travel": "New Zealand",
+		"age": 18,
+		"gender": "Male",
+		"height": 185
+	},{
+		"studentNumber": "Student 13",
+		"travel": "Bali",
+		"age": 30,
+		"gender": "Female",
+		"height": 165
+	},{
+		"studentNumber": "Student 14",
+		"travel": "United States",
+		"age": 23,
+		"gender": "Male",
+		"height": 160
+	},{
+		"studentNumber": "Student 15",
+		"travel": "New Zealand",
+		"age": 20,
+		"gender": "Female",
+		"height": 169
 	}
 ]

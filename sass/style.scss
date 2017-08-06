@@ -102,7 +102,10 @@ body, html{
 	h4{margin-top:$null;}
 }
 
-#male, #female{display:none;}
+#male, #female{
+	display:none;
+	margin-top:50px;
+}
 
 .fa{
 	font-size:120px !important;
