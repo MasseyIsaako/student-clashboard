@@ -18,37 +18,37 @@ function drawChart(){
 		success: function(DataFromJSON){
 			// Travel Map
 			function travel(){
-				data = new google.visualization.DataTable();
+				var data = new google.visualization.DataTable();
 				data.addColumn("string", "Student Favourite Travel Destination");
 
 				for (var i = 0; i < DataFromJSON.length; i++) {
 					data.addRow([DataFromJSON[i].travel]);
 				}
 
-				options = {
+				var options = {
 					datalessRegionColor: "#ebebeb",
 					defaultColor: "#125078",
 					backgroundColor: "#FFFFFF",
 				}
 
-				chart = new google.visualization.GeoChart(document.getElementById("studentTravel"));
+				var chart = new google.visualization.GeoChart(document.getElementById("studentTravel"));
 				chart.draw(data, options);
 			}
 
 			// Age Chart
 			function age(){
-				data = new google.visualization.DataTable();
+				var data = new google.visualization.DataTable();
 				data.addColumn("number", "Student Age");
 
 				for (var i = 0; i < DataFromJSON.length; i++) {
 					data.addRow([DataFromJSON[i].age]);
 				}
 
-				options = {
+				var options = {
 					title: "Age of Students in Class"
 				}
 				
-				chart = new google.visualization.Histogram(document.getElementById("studentAge"));
+				var chart = new google.visualization.Histogram(document.getElementById("studentAge"));
 				google.visualization.events.addListener(chart, 'select', clickEvent);
 				chart.draw(data, options);
 
@@ -96,11 +96,38 @@ function drawChart(){
 				}
 			}
 
+			// Height Chart
+			function height(){
+				var data = new google.visualization.DataTable();
+				data.addColumn("string", "Student Number");
+				data.addColumn("number", "Student Height");
+
+				for (var i = 0; i < DataFromJSON.length; i++) {
+					data.addRow([DataFromJSON[i].studentNumber, DataFromJSON[i].height]);
+				}
+
+				var options = {
+					title: "Height of Students in Class"
+				}
+				
+				var chart = new google.visualization.BarChart(document.getElementById("studentHeight"));
+				google.visualization.events.addListener(chart, 'select', clickEvent);
+				chart.draw(data, options);
+
+				function clickEvent(){
+					var tableRow = chart.getSelection()[0];
+					if(tableRow){
+						var studentHeight = data.getValue(tableRow.row, 1);
+						document.getElementById('height-output').innerText = studentHeight;
+					}
+				}
+			}
 
 			// Calling the functions
 			travel();
 			age();
 			gender();
+			height();
 
 
 		}, error: function(){

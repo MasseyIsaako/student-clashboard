@@ -1,40 +1,48 @@
 [
 	{
+		"studentNumber": "Student 1",
 		"travel": "New Zealand",
 		"age": 18,
 		"gender": "Male",
 		"height": 170
 	},{
+		"studentNumber": "Student 2",
 		"travel": "New Zealand",
 		"age": 18,
 		"gender": "Male",
 		"height": 182
 	},{
+		"studentNumber": "Student 3",
 		"travel": "Bali",
 		"age": 30,
 		"gender": "Female",
 		"height": 165
 	},{
+		"studentNumber": "Student 4",
 		"travel": "Japan",
 		"age": 25,
 		"gender": "Male",
 		"height": 180
 	},{
+		"studentNumber": "Student 5",
 		"travel": "Samoa",
 		"age": 25,
 		"gender": "Male",
 		"height": 180
 	},{
+		"studentNumber": "Student 6",
 		"travel": "Greece",
 		"age": 23,
 		"gender": "Female",
 		"height": 170
 	},{
+		"studentNumber": "Student 7",
 		"travel": "",
 		"age": 24,
 		"gender": "Male",
 		"height": 175
 	},{
+		"studentNumber": "Student 8",
 		"travel": "New Zealand",
 		"age": 26,
 		"gender": "Female",
